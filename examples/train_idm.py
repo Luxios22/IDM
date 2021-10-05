@@ -33,8 +33,8 @@ from idm.utils.rerank import compute_jaccard_distance
 start_epoch = best_mAP = 0
 
 def get_data(name, data_dir):
-    root = osp.join(data_dir, name)
-    dataset = datasets.create(name, root)
+    # root = osp.join(data_dir, name)
+    dataset = datasets.create(name, data_dir)
     return dataset
 
 def get_train_loader(args, dataset, height, width, batch_size, workers,
@@ -318,7 +318,7 @@ if __name__ == '__main__':
     # training configs
     parser.add_argument('--seed', type=int, default=1)
     parser.add_argument('--print-freq', type=int, default=50)
-    parser.add_argument('--eval-step', type=int, default=1)
+    parser.add_argument('--eval-step', type=int, default=10)
 
     # path
     working_dir = osp.dirname(osp.abspath(__file__))

@@ -1,11 +1,13 @@
 from __future__ import absolute_import
 import warnings
-
 from .dukemtmc import DukeMTMC
 from .market1501 import Market1501
 from .msmt17 import MSMT17
 from .personx import PersonX
 from .unreal import UnrealPerson
+from .gta_long_2C_v2 import GTA_Long_2C_V2
+from .prcc import PRCC
+from .ltcc import LTCC
 
 
 __factory = {
@@ -13,7 +15,10 @@ __factory = {
     'dukemtmc': DukeMTMC,
     'msmt17': MSMT17,
     'personx': PersonX,
-    'unreal': UnrealPerson
+    'unreal': UnrealPerson,
+    'GTA_Long_2C_V2': GTA_Long_2C_V2,
+    'prcc': PRCC,
+    'ltcc': LTCC
 }
 
 

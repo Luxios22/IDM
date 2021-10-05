@@ -39,8 +39,8 @@ from idm.utils.rerank import compute_jaccard_distance
 start_epoch = best_mAP = 0
 
 def get_data(name, data_dir):
-    root = osp.join(data_dir, name)
-    dataset = datasets.create(name, root)
+    # root = osp.join(data_dir, name)
+    dataset = datasets.create(name, data_dir)
     return dataset
 
 def get_train_loader(args, dataset, height, width, batch_size, workers,
